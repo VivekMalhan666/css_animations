@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    background-color:rgb(51, 51, 51);
+}
+
+.container {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.1),
+                15px 15px 15px rgba(32, 32, 32, 0.1);
+    ;
+
+}
+
+.container .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: rgb(51, 51, 51);
+}
+
+img {
+    width: 70%;
+    transform: scaleX(-1);
+}
+
+.container .card:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: greenyellow;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(150px at 80% 20%);
+    transition: all 0.5s ease-in-out;
+}
+
+.container .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after {
+    content: 'Nike';
+    position: absolute;
+    left: -15%;
+    top: 40%;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.04);
+    font-family: sans-serif;
+    font-size: 12em;
+    font-weight: 700;
+    font-style: italic;
+}
+.container .card .image{
+    transform: translateY(20%) translateX(10%) rotateZ(-25deg);
+    transition: all 0.5s;
+}
+.container .card:hover .image{
+    transform: translate(10%,-10%) rotateZ(-25deg);
+}
+
+.container .card .content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.container .card .content h2{
+    color: #fff;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+.container .card:hover .content{
+    height: 220px;
+}
+.container .card .content .sizes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.container .card .content .sizes h3,
+.container .card .content .colors h3{
+    color: rgb(235, 235, 235);
+    font-family: monospace;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.container .card .content .sizes span{
+    padding: 10px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+}
+.container .card .content .sizes span:hover{
+    background-color: rgb(212, 252, 134);
+    cursor: pointer;
+}
+
+.container .card .content .colors {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+.container .card:hover .content .sizes,
+.container .card:hover .content .colors{
+
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+.container .card .content .colors span{
+    width: 20px;
+    height: 20px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.container .card .content .colors span:nth-of-type(2){
+    background-color: rgb(96, 152, 236);
+
+}
+.container .card .content .colors span:nth-of-type(3){
+    background-color: rgb(250, 125, 125);
+
+}
+.container .card .content .button{
+    text-decoration: none;
+    font-family: sans-serif;
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    transform: translateY(80px);
+    transition: 0.5s;
+    opacity: 0;
+}
+.container .card:hover .content .button{
+    transform: translateY(0);
+    transition-delay: 0.7s;
+    opacity: 1;
+}

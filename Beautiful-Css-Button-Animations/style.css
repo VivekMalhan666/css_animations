@@ -1,0 +1,440 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(235, 235, 235);
+}
+
+a {
+    display: inline-block;
+    margin: 30px;
+    padding: 20px;
+    margin-top: 50px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 150px;
+    border: 3px solid #504f4f;
+    color: #272727;
+    position: relative;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+
+.button1 {
+    color: grey;
+    border: 5px solid grey;
+}
+
+.button1:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: coral;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: rotateZ(90deg);
+    transform-origin: bottom right;
+    transition: transform 500ms;
+}
+
+.button1:hover::before {
+    transform: rotateZ(0deg);
+}
+
+.button1:hover {
+    color: white;
+    border-color: coral;
+}
+
+/* ---------------------------------button 2 */
+
+.button2 {
+    border: 3px solid rgb(94, 94, 94);
+    color: rgb(107, 107, 107);
+    transition: all 700ms;
+}
+
+.button2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(124, 124, 124);
+    z-index: -1;
+    transition: all 500ms ease-in-out;
+}
+
+.button2:hover:before {
+    width: 100%;
+}
+
+.button2:hover {
+    color: white;
+}
+
+/* ---------------------------------button 3 */
+
+.button3:hover {
+    color: white;
+}
+
+.button3:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(124, 124, 124);
+    z-index: -1;
+    transition: all 500ms ease-in-out;
+    transform: rotateX(90deg);
+}
+
+.button3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(124, 124, 124);
+    z-index: -1;
+    transition: all 500ms ease-in-out;
+    transform: rotateY(90deg);
+}
+
+.button3:hover:before {
+    transform: rotateX(0deg);
+}
+
+.button3:hover:after {
+    transform: rotateY(0deg);
+}
+
+/* ---------------------------------button 4 */
+
+.button4 {
+    font-size: 90px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: 300;
+    transition: 500ms all;
+}
+
+.button4:hover {
+    letter-spacing: 15px;
+    border-width: 20px;
+    font-weight: 700;
+    color: grey;
+    border-color: grey;
+}
+
+/* ---------------------------------button 5 */
+
+.button5:before {
+    content: 'YESS!';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darkturquoise;
+    transition: all 500ms ease-in-out;
+    transform: translateY(-100%);
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.button5:hover:before {
+    transform: translateY(0);
+}
+
+.button5:hover {
+    border-color: darkturquoise;
+}
+
+/* ---------------------------------button 6 */
+
+.button6 {
+    color: rgb(255, 126, 126);
+    border-color: rgb(255, 126, 126);
+}
+
+.button6:hover {
+    background-color: rgb(255, 126, 126);
+    color: white;
+    border-color: rgb(255, 126, 126);
+}
+
+.button6:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(236, 236, 236);
+    transform: translateX(-100%) rotateZ(45deg);
+    transition: 500ms all;
+}
+
+.button6:hover:before {
+    transform: translateX(100%) rotateZ(45deg);
+}
+
+/* ---------------------------------button 7 */
+
+.button7 {
+    background-color: #000000;
+    color: transparent;
+    border-color: rgb(15, 15, 15);
+}
+
+.button7:before {
+    content: 'Hover Over Me';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(51, 51, 51);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 240, 24);
+    transition: 500ms all;
+}
+
+.button7:after {
+    content: 'Hover Over Me';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(51, 51, 51);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 240, 24);
+    transform: translate(-100%, 100%);
+    transition: 500ms all;
+}
+
+.button7:hover:before {
+    transform: translate(100%, -100%);
+}
+
+.button7:hover:after {
+    transform: translate(0, 0);
+}
+
+/* ---------------------------------button 8 */
+
+.button8 {
+    perspective: 300px;
+}
+
+.button8:before {
+    content: 'Hover Over Me';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 68, 68);
+    transform: translateZ(350px);
+    transition: 500ms all;
+}
+
+/* we can also use scale() */
+
+.button8:hover:before {
+    transform: translateZ(0);
+    opacity: 1;
+}
+
+/* ---------------------------------button 9 */
+
+.button9 {
+    border: none;
+    color: black;
+    font-weight: 700;
+    font-size: 150px;
+    transition: all 0.4s;
+}
+
+.button9 span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #3b3b3b;
+    transition: all 0.2s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.button9 span:nth-child(2) {
+    left: 25%;
+    transition-delay: 0.1s;
+}
+
+.button9 span:nth-child(3) {
+    left: 50%;
+    transition-delay: 0.2s;
+}
+
+.button9 span:nth-child(4) {
+    left: 75%;
+    transition-delay: 0.3s;
+}
+
+.button9:hover span {
+    transform: scaleY(1);
+}
+
+.button9:hover {
+    color: white;
+}
+
+/* ---------------------------------button 10 */
+
+.button10 {
+    border-color: coral;
+    color: coral;
+    transition: all 0.5s;
+}
+
+.button10:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: coral;
+    width: 100%;
+    height: 0;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+    transform-origin: top;
+    transition: all 0.5s;
+}
+
+.button10:hover:before {
+    height: 200%;
+}
+
+.button10:hover {
+    color: white;
+}
+
+/* ------------------- Custom scrollbar*/
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.scrollpath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to bottom, #efff0b, #ff1616);
+    animation: animate 5s linear infinite;
+}
+
+.progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #efff0b, #ff1616);
+    filter: blur(5px);
+}
+
+.progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #efff0b, #ff1616);
+    filter: blur(5px);
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        filter: hue-rotate(100deg);
+    }
+    50% {
+        filter: hue-rotate(200deg);
+    }
+    75% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* ----------------------button 11 (ripple effect) */
+
+.button11 {
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    letter-spacing: 3px;
+    color: rgb(11, 65, 112);
+    border-radius: 10px;
+    text-transform: uppercase;
+    border-color: rgb(152, 152, 248);
+    background: linear-gradient(90deg, rgb(97, 232, 250), rgb(240, 163, 255));
+}
+
+.ripple {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: ripples 1s linear infinite;
+    background-color: white;
+}
+
+@keyframes ripples {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.4;
+    }
+    100% {
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+    }
+}
+
